@@ -139,7 +139,6 @@ RDEPENDS:packagegroup-meta-oe-connectivity ="\
     libqmi \
     libtorrent \
     libuv \
-    libwebsockets \
     linuxptp \
     loudmouth \
     modemmanager \
