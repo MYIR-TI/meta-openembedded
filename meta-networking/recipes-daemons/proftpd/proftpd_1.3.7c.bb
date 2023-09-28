@@ -102,6 +102,9 @@ do_install () {
         sed -i '/^MaxInstances/a\AuthPAM                         on\nAuthPAMConfig                   proftpd' \
             ${D}${sysconfdir}/proftpd.conf
     fi
+    
+    install -m 755 -d ${D}/var/lib/${FTPUSER}
+    chown ftp:ftp ${D}/var/lib/${FTPUSER}
 
     install -d ${D}/${systemd_unitdir}/system
     install -m 644 ${WORKDIR}/proftpd.service ${D}/${systemd_unitdir}/system
